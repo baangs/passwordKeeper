@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		573936A725DC50FF00F126EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573936A625DC50FF00F126EA /* LoginViewController.swift */; };
 		573936AF25DC5C6C00F126EA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573936AE25DC5C6C00F126EA /* Extensions.swift */; };
-		573936B725DC603200F126EA /* EntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573936B625DC603200F126EA /* EntriesViewController.swift */; };
 		573936BF25DC632400F126EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573936BE25DC632400F126EA /* RegisterViewController.swift */; };
-		573936C425DC63A000F126EA /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573936C325DC63A000F126EA /* NewEntryViewController.swift */; };
+		573936D425DDFF9700F126EA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573936D325DDFF9700F126EA /* Entry.swift */; };
+		573936D925DE04E600F126EA /* EntryFiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573936D825DE04E600F126EA /* EntryFiller.swift */; };
+		573936E125DE0C7800F126EA /* EntriesViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573936E025DE0C7800F126EA /* EntriesViewContoller.swift */; };
+		573936F125DE1B4000F126EA /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573936F025DE1B4000F126EA /* Album.swift */; };
 		574D3DF325C256CF0087BF9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3DF225C256CF0087BF9D /* AppDelegate.swift */; };
 		574D3DF525C256CF0087BF9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574D3DF425C256CF0087BF9D /* SceneDelegate.swift */; };
 		574D3DFA25C256CF0087BF9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574D3DF825C256CF0087BF9D /* Main.storyboard */; };
@@ -41,9 +43,11 @@
 /* Begin PBXFileReference section */
 		573936A625DC50FF00F126EA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		573936AE25DC5C6C00F126EA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		573936B625DC603200F126EA /* EntriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesViewController.swift; sourceTree = "<group>"; };
 		573936BE25DC632400F126EA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		573936C325DC63A000F126EA /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
+		573936D325DDFF9700F126EA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		573936D825DE04E600F126EA /* EntryFiller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryFiller.swift; sourceTree = "<group>"; };
+		573936E025DE0C7800F126EA /* EntriesViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesViewContoller.swift; sourceTree = "<group>"; };
+		573936F025DE1B4000F126EA /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		574D3DEF25C256CF0087BF9D /* passwordKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwordKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		574D3DF225C256CF0087BF9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		574D3DF425C256CF0087BF9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,8 +100,7 @@
 		5739369C25DC4B5200F126EA /* Entries */ = {
 			isa = PBXGroup;
 			children = (
-				573936B625DC603200F126EA /* EntriesViewController.swift */,
-				573936C325DC63A000F126EA /* NewEntryViewController.swift */,
+				573936E025DE0C7800F126EA /* EntriesViewContoller.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -124,15 +127,11 @@
 		5739369F25DC4BA200F126EA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				573936D325DDFF9700F126EA /* Entry.swift */,
+				573936D825DE04E600F126EA /* EntryFiller.swift */,
+				573936F025DE1B4000F126EA /* Album.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		573936A025DC4BA900F126EA /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Models";
 			sourceTree = "<group>";
 		};
 		573936A125DC4BB700F126EA /* Controllers */ = {
@@ -178,7 +177,6 @@
 				5739369D25DC4B8800F126EA /* Resources */,
 				5739369E25DC4B9C00F126EA /* Views */,
 				573936A125DC4BB700F126EA /* Controllers */,
-				573936A025DC4BA900F126EA /* View Models */,
 				5739369F25DC4BA200F126EA /* Models */,
 				5739369A25DC4A9400F126EA /* Login */,
 				574D3E0025C256D20087BF9D /* Info.plist */,
@@ -334,12 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573936D425DDFF9700F126EA /* Entry.swift in Sources */,
 				573936A725DC50FF00F126EA /* LoginViewController.swift in Sources */,
 				574D3DF325C256CF0087BF9D /* AppDelegate.swift in Sources */,
 				574D3DF525C256CF0087BF9D /* SceneDelegate.swift in Sources */,
+				573936E125DE0C7800F126EA /* EntriesViewContoller.swift in Sources */,
+				573936F125DE1B4000F126EA /* Album.swift in Sources */,
+				573936D925DE04E600F126EA /* EntryFiller.swift in Sources */,
 				573936BF25DC632400F126EA /* RegisterViewController.swift in Sources */,
-				573936B725DC603200F126EA /* EntriesViewController.swift in Sources */,
-				573936C425DC63A000F126EA /* NewEntryViewController.swift in Sources */,
 				573936AF25DC5C6C00F126EA /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
