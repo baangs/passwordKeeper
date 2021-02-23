@@ -7,19 +7,22 @@
 
 import UIKit
 
-class Credential {
-    var email: String
-    var password: String
-    let dataCreated: Date
-    
-    init(email: String, password: String) {
-        self.email = email
-        self.password = password
-        self.dataCreated = Date()
-    }
+//class Credential {
+//    var entity: String?
+//    var emailUsername: String
+//    var password: String?
+//    let dataCreated: Date
 //    
-//    convenience init(email: String, password: String) {
-//        self.init(email: email, password: password)
+//    init(entity: String, email: String, password: String) {
+//        self.entity = entity
+//        self.emailUsername = email
+//        self.password = password
+//        self.dataCreated = Date()
 //    }
-    
-}
+//
+//    convenience init(random: Bool = false) {
+//        let labelKit = [UIView] = []
+//        let
+//    }
+//    
+//}
