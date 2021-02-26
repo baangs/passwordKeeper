@@ -15,7 +15,7 @@ class EntriesViewController: UIViewController{
         super.viewDidLoad()
         
         //customize cells
-        let layout = UICollectionViewFlowLayout()
+        var layout = UICollectionViewFlowLayout()
         collectionView.collectionViewLayout = layout
         layout.itemSize = CGSize(width: 120, height: 120)
         
@@ -41,7 +41,7 @@ extension EntriesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EntriesViewCell.identifier, for: indexPath) as! EntriesViewCell
         
-        cell.configure(with: UIImage(named: "Logo")!)
+        cell.configure(with: UIImage(named: "Lock")!)
         return cell
     }
 }

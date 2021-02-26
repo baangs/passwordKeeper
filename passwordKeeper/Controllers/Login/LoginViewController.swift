@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 class LoginViewController: UIViewController {
     
     //scollview so no overlapping elements
